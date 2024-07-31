@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>API test</title>
+</head>
+<body>
+<div class="container p-5">
+    <form id="interForm">
+        <div class="row mb-4">
+            <div class="form-group border rounded col-md-6 p-4">
+                <h3 class="header-container">Client details:</h3>
+                <div class="row mb-2">
+                    <div class="input-group has-validation col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="firstName" placeholder="First name">
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="invalid-feedback">Please choose a first name.</div>
+                    </div>
+                    <div class="input-group has-validation col">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                            <label for="lastName">Last Name</label>
+                        </div>
+                        <div class="invalid-feedback">Please choose a last name.</div>
+                    </div>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                    <label for="phone">Phone</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <label for="email">Email (optional)</label>
+                </div>
+            </div>
+            <div class="form-group border rounded col-md-6 p-4">
+                <h3 class="header-container">Job details:</h3>
+                <div class="row mb-2">
+                    <div class="input-group col">
+                        <div class="form-floating">
+                            <select class="form-select" id="jobSelect" aria-label="Floating label select example">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="jobSelect">Job type</label>
+                        </div>
+                    </div>
+                    <div class="input-group col">
+                        <div class="form-floating">
+                            <select class="form-select" id="sourceSelect" aria-label="Floating label select example">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="sourceSelect">Source type</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Job description (optional)" id="jobDescription" style="height: 150px"></textarea>
+                    <label for="jobDescription">Job description (optional)</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group border rounded col-md-6 p-4">
+                <h3>Service location:</h3>
+                <div class="input-group has-validation">
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control" id="address" placeholder="Address">
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="invalid-feedback">Please choose an address.</div>
+                </div>
+                <div class="input-group has-validation">
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control" id="city" placeholder="City">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="invalid-feedback">Please choose a city.</div>
+                </div>
+                <div class="input-group has-validation">
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control" id="state" placeholder="State">
+                        <label for="state">State</label>
+                    </div>
+                    <div class="invalid-feedback">Please choose a state.</div>
+                </div>
+                <div class="row">
+                    <div class="input-group has-validation col">
+                        <div class="form-floating mb-2">
+                            <input type="text" class="form-control" id="zipCode" placeholder="Zip Code">
+                            <label for="zipCode">Zip Code</label>
+                        </div>
+                        <div class="invalid-feedback">Please choose a zip code.</div>
+                    </div>
+                    <div class="input-group col">
+                        <div class="form-floating mb-2">
+                            <select class="form-select" id="areaSelect" aria-label="Floating label select example">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <label for="areaSelect">Area</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group border rounded col-md-6 p-4">
+                <h3 class="header-container">Scheduled</h3>
+                <div class="input-group has-validation">
+                    <div class="form-floating mb-2">
+                        <input type="date" class="form-control" id="date" placeholder="Start date">
+                        <label for="date">Start date</label>
+                    </div>
+                    <div class="invalid-feedback">Please choose a start date.</div>
+                </div>
+                <div class="row">
+                    <div class="input-group has-validation col">
+                        <div class="form-floating mb-2">
+                            <input type="time" class="form-control" id="startTime" placeholder="Start time">
+                            <label for="startTime">Start time</label>
+                        </div>
+                        <div class="invalid-feedback">Please choose a start time.</div>
+                    </div>
+                    <div class="input-group has-validation col">
+                        <div class="form-floating mb-2">
+                            <input type="time" class="form-control" id="endTime" placeholder="End time">
+                            <label for="endTime">End time</label>
+                        </div>
+                        <div class="invalid-feedback">Please choose an end time.</div>
+                    </div>
+                </div>
+                <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <label for="floatingSelect">Test select</label>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 justify-content-center">
+            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+            <button type="button" class="btn btn-secondary" id="clearButton">Clear</button>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    document.getElementById('submitButton').addEventListener('click', function() {
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            jobType: document.getElementById('jobSelect').value,
+            sourceType: document.getElementById('sourceSelect').value,
+            jobDescription: document.getElementById('jobDescription').value,
+            address: document.getElementById('address').value,
+            city: document.getElementById('city').value,
+            state: document.getElementById('state').value,
+            zipCode: document.getElementById('zipCode').value,
+            area: document.getElementById('areaSelect').value,
+            startDate: document.getElementById('date').value,
+            startTime: document.getElementById('startTime').value,
+            endTime: document.getElementById('endTime').value,
+            testSelect: document.getElementById('floatingSelect').value
+        };
+
+        // Fetch Pipedrive API to add a new deal
+        fetch('https://api.pipedrive.com/v1/deals', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer c8ec194eab186152a0b11133757d2ac1455b4e6c'
+            },
+            body: JSON.stringify({
+                title: `${formData.firstName} ${formData.lastName} Deal`,
+                person_id: {
+                    name: `${formData.firstName} ${formData.lastName}`,
+                    phone: formData.phone,
+                    email: formData.email
+                },
+                custom_fields: {
+                    jobType: formData.jobType,
+                    sourceType: formData.sourceType,
+                    jobDescription: formData.jobDescription,
+                    address: formData.address,
+                    city: formData.city,
+                    state: formData.state,
+                    zipCode: formData.zipCode,
+                    area: formData.area,
+                    startDate: formData.startDate,
+                    startTime: formData.startTime,
+                    endTime: formData.endTime,
+                    testSelect: formData.testSelect
+                }
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                alert('Deal added successfully');
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    document.getElementById('clearButton').addEventListener('click', function() {
+        document.getElementById('interForm').reset();
+    });
+</script>
+</body>
+</html>
