@@ -174,11 +174,11 @@
         };
 
         // Fetch Pipedrive API to add a new deal
-        fetch('https://api.pipedrive.com/v1/deals', {
+        fetch('https://pixelclub-sandbox.pipedrive.com/deal/2', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer c8ec194eab186152a0b11133757d2ac1455b4e6c'
+                'Authorization': 'Bearer 48ee234c378f2e731e9bc0dd1dbffa8d863b87f9'
             },
             body: JSON.stringify({
                 title: `${formData.firstName} ${formData.lastName} Deal`,
